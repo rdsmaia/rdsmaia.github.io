@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio samples from "An end-to-end adaptive TTS system for Portuguese"</title>
+    <meta charset="UTF-8">
+    <title>An end-to-end adaptive TTS system for Portuguese</title>
+    <style>
+        red {color: red}
+        audio {width: 250px}
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Audio samples from "Audio samples from "An end-to-end adaptive TTS system for Portuguese"</h1>
+      </header>
+    </article>
+
+<!--    <p><b>Paper:</b> <a href="">arXiv</a></p>-->
+<!--    <p><b>Authors</b>: </p>-->
+
+    <div>
+      <b>Abstract:</b>
+      We proposed an end-to-end multispeaker portuguese TTS with adaptive capabilities. The system is composed of three
+	components: (1) a speaker embedding network; (2) a system that inverts text into spectrograms;
+	(3) a neural vocoder based on MelGAN.
+    <p></p>
+    </div>
+
+    <p>For details on MelGAN please refer to <a href="https://arxiv.org/abs/1910.06711"></a>.<br/>
+    For information on tacotron please refer to <a href="https://google.github.io/tacotron/"></a>.<br/>
+    Our implementation is available in the <a href="https://github.com/rdsmaia/end-to-end_portuguese_tts">github repository</a>.<br/><br/>
+    </p>
+
+
+    <p class="toc_title">Contents</p>
+    <div id="toc_container">
+    <ul>
+      <li><a href="#ss">Monospeaker model</a></li>
+      <li><a href="#ms">Multispeaker model without d-vectors</a></li>
+      <li><a href="#e2e">Multispeaker model with d-vectors</a></li>
+      <li><a href="#as">Speaker adaptation</a></li>
+    </ul>
+    </div>
+
+    <p>&nbsp;</p>
+
+    <div>
+      <a name="ss"><h2>Monospeaker model</h2></a>
+      <hr>
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap width="160">Speaker 0 (8.49 hs)</td>
+          <td><audio controls="" preload="none"><source src="samples/mono/speaker00/mel-batch_0_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/mono/speaker00/mel-batch_1_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/mono/speaker00/mel-batch_2_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/mono/speaker00/mel-batch_3_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/mono/speaker00/mel-batch_4_sentence_0_speaker_0.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <div>
+      <a name="ms"><h2>Multispeaker without d-vectors</h2></a>
+      <hr>
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap width="160">Speaker 0 (8.49 hs)</td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker00/mel-batch_0_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker00/mel-batch_1_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker00/mel-batch_2_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker00/mel-batch_3_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker00/mel-batch_4_sentence_0_speaker_0.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>Speaker 1 (0.5 hs)
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker01/mel-batch_0_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker01/mel-batch_1_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker01/mel-batch_2_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker01/mel-batch_3_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker01/mel-batch_4_sentence_0_speaker_1.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>Speaker 76 (0.25 hs)
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker76/mel-batch_0_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker76/mel-batch_1_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker76/mel-batch_2_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker76/mel-batch_3_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker76/mel-batch_4_sentence_0_speaker_76.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>Speaker 77 (2 hs)
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker77/mel-batch_0_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker77/mel-batch_1_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker77/mel-batch_2_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker77/mel-batch_3_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_nodvector/speaker77/mel-batch_4_sentence_0_speaker_77.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <div>
+      <a name="e2e"><h2>Multispeaker with d-vectors</h2></a>
+      <hr>
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap width="160">Speaker 0 (8.49 hs)</td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker00/mel-batch_0_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker00/mel-batch_1_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker00/mel-batch_2_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker00/mel-batch_3_sentence_0_speaker_0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker00/mel-batch_4_sentence_0_speaker_0.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>Speaker 1 (0.5 hs)
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker01/mel-batch_0_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker01/mel-batch_1_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker01/mel-batch_2_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker01/mel-batch_3_sentence_0_speaker_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker01/mel-batch_4_sentence_0_speaker_1.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>Speaker 76 (0.25 hs)
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker76/mel-batch_0_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker76/mel-batch_1_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker76/mel-batch_2_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker76/mel-batch_3_sentence_0_speaker_76.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker76/mel-batch_4_sentence_0_speaker_76.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>Speaker 77 (2 hs)
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker77/mel-batch_0_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker77/mel-batch_1_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker77/mel-batch_2_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker77/mel-batch_3_sentence_0_speaker_77.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/multi_dvector/speaker77/mel-batch_4_sentence_0_speaker_77.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <div>
+      <a name="as"><h2>Multilingual (with LJ Speech Dataset)</h2></a>
+      <hr>
+      <table>
+        <tbody>
+<!--
+        <tr>
+          <td nowrap>baseline
+          <td><audio controls="" preload="none"><source src="samples/as/baseline/as_baseline_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/baseline/as_baseline_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/baseline/as_baseline_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/baseline/as_baseline_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/baseline/as_baseline_5.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>w/o MPD
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MPD/as_wo_mpd_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MPD/as_wo_mpd_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MPD/as_wo_mpd_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MPD/as_wo_mpd_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MPD/as_wo_mpd_5.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>w/o MSD
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MSD/as_wo_msd_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MSD/as_wo_msd_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MSD/as_wo_msd_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MSD/as_wo_msd_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MSD/as_wo_msd_5.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>w/o MRF
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MRF/as_wo_mrf_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MRF/as_wo_mrf_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MRF/as_wo_mrf_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MRF/as_wo_mrf_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_MRF/as_wo_mrf_5.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>w/o Mel-Spectrogram Loss
+          <td><audio controls="" preload="none"><source src="samples/as/wo_L1/as_wo_l1_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_L1/as_wo_l1_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_L1/as_wo_l1_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_L1/as_wo_l1_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as/wo_L1/as_wo_l1_5.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>MPD <i>p</i>=[2,4,8,16,32]
+          <td><audio controls="" preload="none"><source src="samples/as3/pr/as_pr_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as3/pr/as_pr_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as3/pr/as_pr_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as3/pr/as_pr_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as3/pr/as_pr_5.wav"></audio></td>
+        </tr>
+-->
+        </tbody>
+      </table>
+      <hr>
+      <table>
+        <tbody>
+<!--
+        <tr>
+          <td nowrap width="198">MelGAN with MPD</td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG_MPD/as_mg_mpd_500_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG_MPD/as_mg_mpd_500_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG_MPD/as_mg_mpd_500_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG_MPD/as_mg_mpd_500_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG_MPD/as_mg_mpd_500_5.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap>MelGAN</td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG/as_mg_500_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG/as_mg_500_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG/as_mg_500_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG/as_mg_500_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/MG/as_mg_500_5.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+      <hr>
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap width="198">HiFi-GAN V1 (500k step)</td>
+          <td><audio controls="" preload="none"><source src="samples/as2/V1_500/as_v1_500_1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/V1_500/as_v1_500_2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/V1_500/as_v1_500_3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/V1_500/as_v1_500_4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="samples/as2/V1_500/as_v1_500_5.wav"></audio></td>
+        </tr>
+-->
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+  </body>
+</html>
+
